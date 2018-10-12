@@ -3,21 +3,21 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='sourceType: webcam;'>
-        <a-assets>
-            <a-asset-item id="ship-obj" src="model.obj"></a-asset-item>
-            <a-asset-item id="ship-mtl" src="materials.mtl"></a-asset-item>
-        </a-assets>
-        <!-- Using the asset management system. -->
-        <a-entity obj-model="obj: #ship-obj; mtl: #ship-mtl"></a-entity>
-        <a-marker-camera type="pattern" url="pattern/001.patt"></a-marker-camera>
-    </a-scene>
-	<a-scene embedded arjs='sourceType: webcam;'>
-        <a-assets>
-            <a-asset-item id="ship-obj" src="model.obj"></a-asset-item>
-            <a-asset-item id="ship-mtl" src="materials.mtl"></a-asset-item>
-        </a-assets>
-        <!-- Using the asset management system. -->
-        <a-entity obj-model="obj: #ship-obj; mtl: #ship-mtl"></a-entity>
-        <a-marker-camera type="pattern" url="pattern/002.patt"></a-marker-camera>
+        <a-marker-camera type="pattern" url="pattern/001.patt">
+			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
+					<a-torus-knot radius='0.26' radius-tubular='0.05'>
+						<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+					</a-torus-knot>
+			</a-box>
+		</a-marker-camera>
+		
+		
+		 <a-marker-camera type="pattern" url="pattern/002.patt">
+			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
+					<a-torus-knot radius='0.26' radius-tubular='0.05'>
+						<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+					</a-torus-knot>
+			</a-box>
+		 </a-marker-camera>
     </a-scene>
 </body>
