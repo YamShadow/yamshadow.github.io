@@ -122,8 +122,8 @@ AFRAME.registerComponent('emit', {
                         updateMarkers('marker-001', 'marker-002');
                         break;
                     default: 
-                        console.error('Error while looking for last seen pages. Last seen is none of start, middle or end.');
-                        console.error('Last seen is: '+lastSeen);
+                        console.error('Error while looking for type of marker. It is none of start, middle nor end, ...');
+                        console.error('Marker type is: '+lastSeen);
                 }
                 console.log(aimg);
             }
