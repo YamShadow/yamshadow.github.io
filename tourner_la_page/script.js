@@ -107,22 +107,27 @@ var actual = {
 // Et à l'id du component auquel il est rattaché
 AFRAME.registerComponent('emit', {
     schema: {type: 'string'},
-    init: function () {
-        var eventToEmit = this.data;
-        document.getElementById('scene').emit(eventToEmit);
-        console.log(eventToEmit);
+    tick: function () {
+        for (var aimg of document.querySelectorAll('a-marker > a-image')) {
+            if(aimg.object3D.visible == true) {
+                switch (aimg.className) {
+                    case 'start': handleStart(); break;
+                    case 'middle': handleMiddle(); break;
+                    case 'end': handleEnd(); break;
+                    case 'none':
+                    case 'couv':
+                    case 'menu':
+                        actualPage();
+                        updateMarkers('marker-001', 'marker-002');
+                        break;
+                    default: 
+                        console.error('Error while looking for last seen pages. Last seen is none of start, middle or end.');
+                        console.error('Last seen is: '+lastSeen);
+                }
+            }
+        }
     }
 });
-
-/**
- * On écoute les différents events
- * A chaque fois on switch lastSeen 
- * pour savoir quelle page afficher à présent.
- * Puis on update sa valeur.
-*/
-document.addEventListener('start', (e) => handleStart());
-document.addEventListener('middle', (e) => handleMiddle());
-document.addEventListener('end', (e) => handleEnd());
 
 /**
  * Les fonctions de gestion des événements de pop in
@@ -245,5 +250,5 @@ function actualPage() {
  */
 function updateMarkers(marker0, marker1) {
     document.getElementById(marker0).setAttribute('image', 'src', actual.book.pages[actual.page.begin]); 
-    document.getElementById(marker1).setAttribute('image', 'src', actual.book.pages[actual.page.end]); 
+    if (typeof marker1 != 'undefined') document.getElementById(marker1).setAttribute('image', 'src', actual.book.pages[actual.page.end]); 
 }
