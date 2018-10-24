@@ -120,9 +120,9 @@ AFRAME.registerComponent('emit', {
  * pour savoir quelle page afficher à présent.
  * Puis on update sa valeur.
 */
-document.addEventListener('start', (e) => handleStart('marker-L', 'marker-I'));
-document.addEventListener('middle', (e) => handleMiddle('marker-V', 'marker-R'));
-document.addEventListener('end', (e) => handleEnd('marker-E', 'marker-S'));
+document.addEventListener('start', (e) => handleStart('marker-001', 'marker-002'));
+document.addEventListener('middle', (e) => handleMiddle('marker-003', 'marker-004'));
+document.addEventListener('end', (e) => handleEnd('marker-005', 'marker-006'));
 
 /**
  * Les fonctions de gestion des événements de pop in
