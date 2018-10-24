@@ -127,23 +127,23 @@ document.addEventListener('end', (e) => handleEnd('marker-005', 'marker-006'));
 /**
  * Les fonctions de gestion des événements de pop in
  */
-function handleStart (marker0, marker1) {
+function handleStart () {
     if (lastSeen == 'start') return;
     else {
         switch (lastSeen) {
             case 'end': 
                 nextPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-001', 'marker-002');
                 break;
             case 'middle': 
                 prevPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-001', 'marker-002');
                 break;
             case 'none':
             case 'couv':
             case 'menu':
                 actualPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-001', 'marker-002');
                 break;
             default: 
                 console.error('Error while looking for last seen pages. Last seen is none of start, middle or end.');
@@ -153,23 +153,23 @@ function handleStart (marker0, marker1) {
     }
 }
 
-function handleMiddle (marker0, marker1) {
+function handleMiddle () {
     if (lastSeen == 'middle') return;
     else {
         switch (lastSeen) {
             case 'start': 
                 nextPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-003', 'marker-004');
                 break;
             case 'end': 
                 prevPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-003', 'marker-004');
                 break;
             case 'none':
             case 'couv':
             case 'menu':
                 actualPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-003', 'marker-004');
                 break;
             default: 
                 console.error('Error while looking for last seen pages. Last seen is none of middle, middle or end.');
@@ -179,22 +179,22 @@ function handleMiddle (marker0, marker1) {
     }
 }
 
-function handleEnd (marker0, marker1) {
+function handleEnd () {
     if (lastSeen == 'end') return;
     else {
         switch (lastSeen) {
             case 'middle': 
                 nextPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-005', 'marker-006');
                 break;
             case 'start': 
                 prevPage();
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-005', 'marker-006');
                 break;
             case 'none':
             case 'couv':
             case 'menu':
-                updateMarkers(marker0, marker1);
+                updateMarkers('marker-005', 'marker-006');
                 break;
             default: 
                 console.error('Error while looking for last seen pages. Last seen is none of end, middle or end.');
