@@ -24,6 +24,7 @@
  * 
  */
 
+ 
 /**
  * lastSeen retient la dernière combinaison de page vue :
  *  - none : quand rien n'a été vu
