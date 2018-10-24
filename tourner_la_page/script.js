@@ -24,7 +24,7 @@
  * 
  */
 
- 
+
 /**
  * lastSeen retient la dernière combinaison de page vue :
  *  - none : quand rien n'a été vu
@@ -125,6 +125,7 @@ AFRAME.registerComponent('emit', {
                         console.error('Error while looking for last seen pages. Last seen is none of start, middle or end.');
                         console.error('Last seen is: '+lastSeen);
                 }
+                console.log(aimg);
             }
         }
     }
