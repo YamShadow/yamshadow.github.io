@@ -51,7 +51,9 @@ var api = [
             "img/SAO/001.png",
             "img/SAO/002.png",
             "img/SAO/003.png",
-            "img/SAO/004.png"
+            "img/SAO/004.png",
+            "img/SAO/005.png",
+            "img/SAO/006.png",
         ]
     },
     {
@@ -61,9 +63,35 @@ var api = [
             "img/SAO_ln/001.png",
             "img/SAO_ln/002.png",
             "img/SAO_ln/003.png",
-            "img/SAO_ln/004.png"
+            "img/SAO_ln/004.png",
+            "img/SAO_ln/005.png",
+            "img/SAO_ln/006.png",
         ]
-    }
+    },
+    {
+        "nom": "Overlord",
+        "couv": "img/Overlord/couv.png",
+        "pages": [
+            "img/Overlord/001.png",
+            "img/Overlord/002.png",
+            "img/Overlord/003.png",
+            "img/Overlord/004.png",
+            "img/Overlord/005.png",
+            "img/Overlord/006.png",
+        ]
+    },
+    {
+        "nom": "Danmachi",
+        "couv": "img/Danmachi/couv.png",
+        "pages": [
+            "img/Danmachi/001.png",
+            "img/Danmachi/002.png",
+            "img/Danmachi/003.png",
+            "img/Danmachi/004.png",
+            "img/Danmachi/005.png",
+            "img/Danmachi/006.png",
+        ]
+    };
 ];
 
 var actual = {
