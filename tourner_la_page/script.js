@@ -46,52 +46,52 @@ var lastSeen = 'none';
 var api = [
     {
         "nom": "SAO manga",
-        "couv": "img/SAO/couv.png",
+        "couv": "img/SAO/couv.jpg",
         "pages": [
-            "img/SAO/001.png",
-            "img/SAO/002.png",
-            "img/SAO/003.png",
-            "img/SAO/004.png",
-            "img/SAO/005.png",
-            "img/SAO/006.png",
+            "img/SAO/001.jpg",
+            "img/SAO/002.jpg",
+            "img/SAO/003.jpg",
+            "img/SAO/004.jpg",
+            "img/SAO/005.jpg",
+            "img/SAO/006.jpg",
         ]
     },
     {
         "nom": "SAO light novel",
-        "couv": "img/SAO_ln/couv.png",
+        "couv": "img/SAO_ln/couv.jpg",
         "pages": [
-            "img/SAO_ln/001.png",
-            "img/SAO_ln/002.png",
-            "img/SAO_ln/003.png",
-            "img/SAO_ln/004.png",
-            "img/SAO_ln/005.png",
-            "img/SAO_ln/006.png",
+            "img/SAO_ln/001.jpg",
+            "img/SAO_ln/002.jpg",
+            "img/SAO_ln/003.jpg",
+            "img/SAO_ln/004.jpg",
+            "img/SAO_ln/005.jpg",
+            "img/SAO_ln/006.jpg",
         ]
     },
     {
         "nom": "Overlord",
-        "couv": "img/Overlord/couv.png",
+        "couv": "img/Overlord/couv.jpg",
         "pages": [
-            "img/Overlord/001.png",
-            "img/Overlord/002.png",
-            "img/Overlord/003.png",
-            "img/Overlord/004.png",
-            "img/Overlord/005.png",
-            "img/Overlord/006.png",
+            "img/Overlord/001.jpg",
+            "img/Overlord/002.jpg",
+            "img/Overlord/003.jpg",
+            "img/Overlord/004.jpg",
+            "img/Overlord/005.jpg",
+            "img/Overlord/006.jpg",
         ]
     },
     {
         "nom": "Danmachi",
-        "couv": "img/Danmachi/couv.png",
+        "couv": "img/Danmachi/couv.jpg",
         "pages": [
-            "img/Danmachi/001.png",
-            "img/Danmachi/002.png",
-            "img/Danmachi/003.png",
-            "img/Danmachi/004.png",
-            "img/Danmachi/005.png",
-            "img/Danmachi/006.png",
+            "img/Danmachi/001.jpg",
+            "img/Danmachi/002.jpg",
+            "img/Danmachi/003.jpg",
+            "img/Danmachi/004.jpg",
+            "img/Danmachi/005.jpg",
+            "img/Danmachi/006.jpg",
         ]
-    };
+    }
 ];
 
 var actual = {
@@ -109,7 +109,7 @@ AFRAME.registerComponent('emit', {
     schema: {type: 'string'},
     init: function () {
         var eventToEmit = this.data;
-        document.getElementById(eventToEmit).emit(eventToEmit);
+        document.emit(eventToEmit);
         console.log(eventToEmit);
     }
 });
