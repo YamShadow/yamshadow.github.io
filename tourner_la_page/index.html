@@ -18,40 +18,40 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded arjs='sourceType: webcam;'>
+	<a-scene embedded id="scene" arjs='sourceType: webcam;'>
 		<a-marker type="pattern" url="pattern/couv.patt">
 			<!-- Une image blanche en attendant de récupérer la source de la couverture par call AJAX -->
-			<a-image id="couv" emit="couv" src="img/blank.png"></a-image>
+			<a-image id="couv" emit="couv" src="img/blank.png" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/L.patt">
 			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
-			<a-image id="marker-L" emit="start" src=""></a-image>
+			<a-image id="marker-L" emit="start" src="" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/I.patt">
 			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
-			<a-image id="marker-I" emit="start" src=""></a-image>
+			<a-image id="marker-I" emit="start" src="" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/V.patt">
 			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
-			<a-image id="marker-V" emit="middle" src=""></a-image>
+			<a-image id="marker-V" emit="middle" src="" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/R.patt">
 			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
-			<a-image id="marker-R" emit="middle" src=""></a-image>
+			<a-image id="marker-R" emit="middle" src="" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/E.patt">
 			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
-			<a-image id="marker-E" emit="end" src=""></a-image>
+			<a-image id="marker-E" emit="end" src="" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/S.patt">
 			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
-			<a-image id="marker-S" emit="end" src=""></a-image>
+			<a-image id="marker-S" emit="end" src="" geometry="primitive:plane"></a-image>
 		</a-marker>
 
 		<a-entity camera></a-entity>

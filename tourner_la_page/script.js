@@ -109,7 +109,7 @@ AFRAME.registerComponent('emit', {
     schema: {type: 'string'},
     init: function () {
         var eventToEmit = this.data;
-        document.emit(eventToEmit);
+        document.getElementById('scene').emit(eventToEmit);
         console.log(eventToEmit);
     }
 });
