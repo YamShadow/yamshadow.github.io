@@ -5,7 +5,7 @@
 	<a-scene embedded id="scene" arjs='sourceType: webcam;'>
 		<a-marker type="pattern" url="pattern/L.patt">
 			<!-- Une image blanche en attendant de récupérer la source de la couverture par call AJAX -->
-			<a-image id="couv" emit="couv" src="./assets/SAO/couv.jpg" height="2" width="2" position="0 0 0" rotation="270 0 0"></a-image>
+			<a-image id="couv" emit="couv" src="./assets/SAO/couv.jpg" scale='2 2 0' position="0 0 0" rotation="270 0 0"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/I.patt">
