@@ -2,57 +2,33 @@
 <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs='sourceType: webcam;'>
-        <a-marker type="pattern" url="pattern/L.patt">
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
-					<a-torus-knot radius='0.26' radius-tubular='0.05'>
-						<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-					</a-torus-knot>
-			</a-box>
+	<a-scene embedded id="scene" arjs='sourceType: webcam;'>
+		<a-marker type="pattern" url="pattern/L.patt">
+			<!-- Une image blanche en attendant de récupérer la source de la couverture par call AJAX -->
+			<a-image id="couv" emit="couv" src="./assets/SAO/couv.jpg" position="0 0 0" rotation="270 0 0"></a-image>
 		</a-marker>
-		
-		
+
 		<a-marker type="pattern" url="pattern/I.patt">
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
-				<a-torus-knot radius='0.26' radius-tubular='0.05'>
-					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-torus-knot>
-			</a-box>
+			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
+			<a-image id="marker-002" class="start" src="./assets/SAO/001.jpg" position="0 0 0" rotation="270 0 0"></a-image>
 		</a-marker>
-		 
+
 		<a-marker type="pattern" url="pattern/V.patt">
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:blue;'>
-				<a-torus-knot radius='0.26' radius-tubular='0.05'>
-					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-torus-knot>
-			</a-box>
+			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
+			<a-image id="marker-003" class="middle" src="./assets/SAO/002.jpg" position="0 0 0" rotation="270 0 0"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/R.patt">
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:yellow;'>
-				<a-torus-knot radius='0.26' radius-tubular='0.05'>
-					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-torus-knot>
-			</a-box>
+			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
+			<a-image id="marker-004" class="middle" src="./assets/SAO/003.jpg" position="0 0 0" rotation="270 0 0"></a-image>
 		</a-marker>
 
 		<a-marker type="pattern" url="pattern/E.patt">
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:white;'>
-				<a-torus-knot radius='0.26' radius-tubular='0.05'>
-					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-torus-knot>
-			</a-box>
+			<!-- Des points de suspension en attendant de récupérer la bonne page par call AJAX -->
+			<a-image id="marker-005" class="end" src="./assets/SAO/004.jpg" position="0 0 0" rotation="270 0 0"></a-image>
 		</a-marker>
 
-		<a-marker type="pattern" url="pattern/S.patt">
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:black;'>
-				<a-torus-knot radius='0.26' radius-tubular='0.05'>
-					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-torus-knot>
-			</a-box>
-		</a-marker>
-		 
-		 <a-entity camera></a-entity>
+		<a-entity camera></a-entity>
 	</a-scene>
-	
+
 </body>
